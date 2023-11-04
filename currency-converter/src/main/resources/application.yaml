@@ -1,0 +1,6 @@
+server:
+  port: 8081
+
+exchanger:
+  url: "https://v6.exchangerate-api.com/v6"
+  access-key: "75c8fc00b3dd57597ee75659"
