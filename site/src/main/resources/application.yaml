@@ -1,0 +1,5 @@
+server:
+  port: 8080
+
+address:
+  customer-service: ${ADDRESS_CUSTOMER_SERVICE:http://localhost:8081}

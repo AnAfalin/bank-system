@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en ru" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <th:block th:insert="~{fragments/header :: head}"/>
+
+    <title>DreamBank</title>
+</head>
+<body>
+<div class="container">
+    <th:block th:insert="~{fragments/navigation :: navigation}"/>
+
+    <div id="content">
+        <h2>DreamBank - банк, который поможет Вам осуществить мечту!</h2>
+    </div>
+
+    <th:block th:insert="~{fragments/footer :: footer}"/>
+</div>
+</body>
+</html>

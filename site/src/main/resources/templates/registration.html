@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <th:block th:insert="~{fragments/header :: head}"/>
+
+    <title>BankSystem: Регистрация</title>
+</head>
+<body>
+<div class="container">
+    <th:block th:insert="~{fragments/navigation :: navigation}"/>
+
+    <div id="content">
+        <h3>Регистрация</h3>
+        <form id="registration"
+              th:action="@{/reg}"
+              th:object="${request}"
+              th:method="post">
+
+            <label for="firstname">Имя</label>
+            <input type="text" name="firstname" id="firstname" th:field="*{firstname}">
+            <br>
+
+            <label for="surname">Фамилия</label>
+            <input type="text" name="surname" id="surname" th:field="*{surname}">
+            <br>
+
+            <label for="patronymic">Отчество</label>
+            <input type="text" name="patronymic" id="patronymic" th:field="*{patronymic}">
+            <br>
+
+            <label for="birthday">Дата рождения</label>
+            <input type="date" name="birthday" id="birthday" th:field="*{birthday}">
+            <br>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" th:field="*{email}">
+            <br>
+
+            <label for="numberPhone">Номер телефона</label>
+            <input type="tel" name="numberPhone" id="numberPhone" placeholder="+7" size="12" th:field="*{numberPhone}">
+            <br>
+
+            <label for="residentialAddress">Адрес регистрации</label>
+            <input type="text" name="residentialAddress" id="residentialAddress" th:field="*{residentialAddress}">
+            <br>
+
+            <label for="numberPassport">Номер и серия паспорта</label>
+            <input type="text" name="numberPassport" id="numberPassport" size="10" th:field="*{numberPassport}">
+            <br>
+
+            <button form="registration">Зарегистрироваться</button>
+        </form>
+    </div>
+
+    <th:block th:insert="~{fragments/footer :: footer}"/>
+</div>
+</body>
+</html>
